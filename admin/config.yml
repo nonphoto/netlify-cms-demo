@@ -2,12 +2,12 @@ backend:
   name: github
   repo: nonphoto/netlify-cms-demo
   branch: master
-media_folder: "static/images/uploads"
+media_folder: "content/images/uploads"
 public_folder: "/images/uploads"
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "static/blog"
+    folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
