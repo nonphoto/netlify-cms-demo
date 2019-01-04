@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "http-server"
   },
   "author": "Jonas Luebbers",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.16.4"
-  }
+  "license": "MIT"
 }
