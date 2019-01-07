@@ -1,5 +1,6 @@
+#! /usr/bin/env node
+
 const fs = require('fs')
-const glob = require('glob')
 const YAML = require('yaml')
 const markdown = require('markdown')
 
@@ -16,12 +17,7 @@ function template(content) {
     `
 }
 
-glob('content/blog/*', (error, files) => {
-    if (error) throw error
-
-    const posts = files.map((file) => {
-        return fs.readFileSync(file)
-    })
-
-    console.log(posts)
+const files = process.argv.slice(2)
+files.forEach((file) => {
+    fs.createReadStream(file).pipe(process.stdout)
 })

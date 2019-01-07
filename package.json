@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "http-server"
+    "start": "http-server",
+    "build": "mkdir -p build && ./build.js content/blog/* > build/index.html"
   },
   "author": "Jonas Luebbers",
   "license": "MIT",
   "dependencies": {
-    "glob": "^7.1.3",
     "markdown": "^0.5.0",
     "yaml": "^1.2.0"
   }
