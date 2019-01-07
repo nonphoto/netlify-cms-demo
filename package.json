@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server",
-    "build": "mkdir -p build && ./build-html.js content/blog/* > build/index.html && cp source/* build"
+    "build": "mkdir -p build && ./build-html.js content/blog/* > build/index.html && cp source/* build",
+    "now-build": "npm run build"
   },
   "author": "Jonas Luebbers",
   "license": "MIT",
