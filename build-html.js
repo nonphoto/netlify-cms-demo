@@ -7,7 +7,7 @@ const markdown = require('markdown').markdown
 function template(content) {
     const items = content.map((item) => {
         return `
-            <div>
+            <div class="blog-item">
                 <h1>${item.title}</h1>
                 ${item.body}
             </div>
@@ -18,6 +18,7 @@ function template(content) {
         <html>
             <head>
                 <title>Netlify CMS Demo</title>
+                <link rel="stylesheet" href="index.css">
             </head>
             <body>
                 ${items}
