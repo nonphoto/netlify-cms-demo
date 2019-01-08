@@ -1,11 +1,13 @@
 {
-  "name": "netlify-cms-test",
+  "name": "netlify-cms-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "http-server",
-    "build": "mkdir -p build && ./build-html.js content/blog/* > build/index.html && cp source/* build",
+    "build:html": "./build-html.js content/blog/* > build/index.html",
+    "build:source": "cp source/* build",
+    "build": "mkdir -p build && npm run build:html && npm run build:source",
     "now-build": "npm run build"
   },
   "author": "Jonas Luebbers",

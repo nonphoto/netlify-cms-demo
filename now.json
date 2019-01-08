@@ -1,7 +1,8 @@
 {
     "version": 2,
+    "name": "netlify-cms-demo",
     "alias": [
-        "netlify-cms-demo.now.sh"
+        "netlify-cms-demo"
     ],
     "builds": [
         { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "build" }},
