@@ -21,6 +21,7 @@ function template(content) {
                 <link rel="stylesheet" href="static/styles/index.css">
             </head>
             <body>
+                <a href="/static/admin">Edit this page</a>
                 ${items}
             </body>
         </html>
