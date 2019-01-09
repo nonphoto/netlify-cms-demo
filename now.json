@@ -6,9 +6,6 @@
     ],
     "builds": [
         { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "build" }},
-        { "src": "admin/*", "use": "@now/static" }
-    ],
-    "routes": [
-        { "src": "/config.yml", "dest": "/admin/config.yml" }
+        { "src": "static/**", "use": "@now/static" }
     ]
 }

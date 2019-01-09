@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server",
-    "build:html": "./build-html.js content/blog/* > build/index.html",
-    "build:source": "cp source/* build",
-    "build": "mkdir -p build && npm run build:html && npm run build:source",
+    "build": "mkdir -p build && ./build-html.js static/blog/* > build/index.html",
     "now-build": "npm run build"
   },
   "author": "Jonas Luebbers",

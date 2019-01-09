@@ -18,7 +18,7 @@ function template(content) {
         <html>
             <head>
                 <title>Netlify CMS Demo</title>
-                <link rel="stylesheet" href="index.css">
+                <link rel="stylesheet" href="static/styles/index.css">
             </head>
             <body>
                 ${items}

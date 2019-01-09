@@ -3,12 +3,11 @@ backend:
   repo: nonphoto/netlify-cms-demo
   branch: master
   base_url: https://netlify-cms-auth-provider.now.sh
-media_folder: "content/images"
-public_folder: "/images"
+media_folder: "static/images"
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "content/blog"
+    folder: "static/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
