@@ -12,7 +12,8 @@ h1 {
     margin-top: 0;
 }
 
-a {
+.admin-link {
+    display: block;
     margin-bottom: 2rem;
 }
 
