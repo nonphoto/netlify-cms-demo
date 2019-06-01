@@ -1,7 +1,6 @@
 const fs = require('fs')
-const glob = require('glob')
 const YAML = require('yaml')
-const markdown = require('markdown')
+const markdown = require('markdown').markdown
 
 function template(content) {
     return `
@@ -10,18 +9,17 @@ function template(content) {
                 <title>Netlify CMS Demo</title>
             </head>
             <body>
-                ${content}
+                <h1>${content.title}</h1>
+                ${content.body}
             </body>
         </html>
     `
 }
 
-glob('content/blog/*', (error, files) => {
-    if (error) throw error
-
-    const posts = files.map((file) => {
-        return fs.readFileSync(file)
-    })
-
-    console.log(posts)
+process.stdin.setEncoding('utf8')
+process.stdin.on('data', function(chunk) {
+    const parsedChunk = chunk.match(/---((.|\n)*)---((.|\n)*)/m)
+    const data = YAML.parse(parsedChunk[1])
+    data.body = markdown.toHTML(parsedChunk[3])
+    process.stdout.write(template(data))
 })
